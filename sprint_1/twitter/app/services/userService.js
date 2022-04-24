@@ -12,6 +12,18 @@ class UserService{
   static updateUsername(userInfo, username){
       userInfo.username = username
   }
+
+  static getAllUsernames(users){
+    var usernames = [];
+
+    console.log(users)
+
+     users.forEach(user => {
+      usernames.push(user.username)
+     });
+    
+    return usernames
+  }
 }
 
 module.exports = UserService
